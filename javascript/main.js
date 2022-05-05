@@ -41,8 +41,7 @@ window.addEventListener("load", function () {
 let span = document.querySelector(".up");
 
 window.onscroll = function () {
-
-  this.scrollY >= 500
+  window.scrollY >= 500
     ? span.classList.add("show")
     : span.classList.remove("show");
 };
@@ -54,3 +53,13 @@ span.onclick = function () {
   });
 };
 // --------------------up-----------------------
+let skills = document.querySelector(".skills");
+let spans = document.querySelectorAll(".skills .box span");
+window.addEventListener("scroll", function () {
+  if (window.scrollY >= skills.offsetTop - 100) {
+    console.log("Reached Section Three");
+    spans.forEach((span) => {
+      span.classList.add("animate-progress");
+    });
+  }
+});

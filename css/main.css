@@ -344,23 +344,23 @@ body::-webkit-scrollbar-thumb {
   color: white;
   transition-duration: 0.3s;
 }
-.header .social .fa-facebook-f:hover {
+.header .social .ai-facebook-fill:hover {
   color: #1877f2;
   text-shadow: 0 0 10px #1877f2;
 }
-.header .social .fa-twitter:hover {
+.header .social .ai-twitter-fill:hover {
   color: #1da1f2;
   text-shadow: 0 0 10px #1da1f2;
 }
-.header .social .fa-instagram:hover {
+.header .social .ai-instagram-fill:hover {
   color: #e1306c;
   text-shadow: 0 0 10px #e1306c;
 }
-.header .social .fa-whatsapp:hover {
+.header .social .ai-whatsapp-fill:hover {
   color: #075e54;
   text-shadow: 0 0 10px #075e54;
 }
-.header .social .fa-linkedin-in:hover {
+.header .social .ai-linkedin-fill:hover {
   color: #0077b5;
   text-shadow: 0 0 10px #0077b5;
 }
@@ -553,12 +553,15 @@ body::-webkit-scrollbar-thumb {
 
 .about .container {
   display: flex;
-  gap: 60px;
+  gap: 30px;
 }
 @media (max-width: 767px) {
   .about .container {
     flex-direction: column;
   }
+}
+.about .container > div {
+  flex-basis: 50%;
 }
 .about .container .image img {
   max-width: 100%;
@@ -567,6 +570,10 @@ body::-webkit-scrollbar-thumb {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  width: 400px;
+  height: auto;
+  margin: auto;
+  display: block;
 }
 .about .container .text {
   padding: 0 30px;
@@ -624,6 +631,7 @@ body::-webkit-scrollbar-thumb {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   transition-duration: 0.3s;
+  margin: auto;
 }
 @media (max-width: 767px) {
   .about .container .text > a {
@@ -702,22 +710,30 @@ body::-webkit-scrollbar-thumb {
   background: #ffa97a;
   box-shadow: 0px 0px 5px #ffa97a;
 }
-.skills .container .box .skill-holder .html span::before {
+.skills .container .box .skill-holder span::before {
+  width: 0;
+  transition: all 0.5s linear;
+  -webkit-transition: all 0.5s linear;
+  -moz-transition: all 0.5s linear;
+  -ms-transition: all 0.5s linear;
+  -o-transition: all 0.5s linear;
+}
+.skills .container .box .skill-holder .html .animate-progress::before {
   width: 80%;
 }
-.skills .container .box .skill-holder .css span::before {
+.skills .container .box .skill-holder .css .animate-progress::before {
   width: 70%;
 }
-.skills .container .box .skill-holder .js span::before {
+.skills .container .box .skill-holder .js .animate-progress::before {
   width: 50%;
 }
-.skills .container .box .skill-holder .figma span::before {
+.skills .container .box .skill-holder .figma .animate-progress::before {
   width: 70%;
 }
-.skills .container .box .skill-holder .sketch span::before {
+.skills .container .box .skill-holder .sketch .animate-progress::before {
   width: 10%;
 }
-.skills .container .box .skill-holder .ps span::before {
+.skills .container .box .skill-holder .ps .animate-progress::before {
   width: 10%;
 }
 .skills .container .box .skill-holder .skill span::after {
@@ -835,7 +851,12 @@ body::-webkit-scrollbar-thumb {
   }
 }
 .work .container .box:hover {
-  box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+  box-shadow: rgb(149 157 165 / 20%) 0px 10px 20px;
+  transform: translateY(-4px);
+  -webkit-transform: translateY(-4px);
+  -moz-transform: translateY(-4px);
+  -ms-transform: translateY(-4px);
+  -o-transform: translateY(-4px);
 }
 .work .container .box:hover a {
   animation: show 0.3s forwards;
@@ -955,7 +976,7 @@ body::-webkit-scrollbar-thumb {
   background-color: var(--main-color);
   font-weight: bold;
   font-size: 20px;
-  padding: 5px 7px;
+  padding: 5px ;
   border-radius: 4px;
   font-family: Arial, Tahoma;
   cursor: pointer;
