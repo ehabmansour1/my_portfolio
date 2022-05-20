@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <!-- <link rel="stylesheet" href="css/all.min.css" /> -->
     <link rel="stylesheet" href="css/main.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="images/favicon.png" />
     <title>{E}hab Mansour</title>
@@ -69,7 +70,7 @@
           <h1>Hi, I am Ehab Mansour</h1>
           <p>Frontend Developer</p>
         </div>
-        <div class="scroll">
+        <div class="scroll animate__animated animate__bounce">
           <p>scroll</p>
           <i class="ai-mobile-device"></i>
         </div>
@@ -85,10 +86,10 @@
       <h2 class="main-heading">About Me</h2>
       <span>My Intro</span>
       <div class="container">
-        <div class="image">
+        <div class="image" data-aos="fade-right">
           <img src="images/me.jpg" alt="me" />
         </div>
-        <div class="text">
+        <div class="text" data-aos="fade-left">
           <p>
             I'm Ehab Mansour ,a junior Frontend Developer,Have some skills in
             computer software and hardware , and have the goal to be a Full
@@ -161,17 +162,17 @@
         <button>Web</button>
       </div>
       <div class="container">
-        <div class="box">
+        <div class="box" data-aos="zoom-in">
           <p>Gaming Dashboard</p>
           <img src="images/gdash.webp" alt="gdash" />
           <a href="https://ehabmansour1.github.io/game_dash/">Live Demo</a>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in">
           <p>Podcaster</p>
           <img src="images/podcastr.webp" alt="podcastr" />
           <a href="https://ehabmansour1.github.io/podcaster/">Live Demo</a>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in">
           <p>GWYN</p>
           <img src="images/gwyn.webp" alt="gwyn" />
           <a href="https://ehabmansour1.github.io/-gwyn/">Live Demo</a>
@@ -181,22 +182,22 @@
           <img src="images/arabic_signup.webp" alt="arabic_signup" />
           <a href="https://ehabmansour1.github.io/arabic_signup/">Live Demo</a>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in">
           <p>Template 3</p>
           <img src="images/temp3.webp" alt="temp3" />
           <a href="https://ehabmansour1.github.io/temp-3/">Live Demo</a>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in">
           <p>Mntn</p>
           <img src="images/mntn.webp" alt="mntn" />
           <a href="https://ehabmansour1.github.io/mntn/">Live Demo</a>
         </div>
-        <div class="box">
-          <p>Login Form</p>
-          <img src="images/login_form.webp" alt="login_form" />
-          <a href="https://ehabmansour1.github.io/login_form/">Live Demo</a>
+        <div class="box" data-aos="zoom-in">
+          <p>Azkari</p>
+          <img src="images/azkri.webp" alt="azkari" />
+          <a href="https://azkari.me/">Live Demo</a>
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in">
           <p>Chat Messenger</p>
           <img src="images/chat_wessenger.webp" alt="chat_wessenger" />
           <a
@@ -204,7 +205,7 @@
             >Live Demo</a
           >
         </div>
-        <div class="box">
+        <div class="box" data-aos="zoom-in">
           <p>Others on My Github</p>
           <img src="images/github.webp" alt="github" />
           <a href="https://github.com/ehabmansour1">Link</a>
@@ -256,5 +257,9 @@
     <!-- end footer  -->
     <script src="https://unpkg.com/akar-icons-fonts"></script>
     <script src="javascript/main.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>

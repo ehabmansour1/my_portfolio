@@ -55,6 +55,7 @@ span.onclick = function () {
 // --------------------up-----------------------
 let skills = document.querySelector(".skills");
 let spans = document.querySelectorAll(".skills .box span");
+let box = document.querySelectorAll(".skills .box");
 window.addEventListener("scroll", function () {
   if (window.scrollY >= skills.offsetTop - 100) {
     console.log("Reached Section Three");
