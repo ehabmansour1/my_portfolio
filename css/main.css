@@ -85,7 +85,7 @@ html {
   z-index: 100;
   position: relative;
   padding: 20px 0 60px;
-  overflow: hidden;
+
 }
 .divider {
   position: relative;
@@ -555,6 +555,7 @@ body::-webkit-scrollbar-thumb {
 .about .container {
   display: flex;
   gap: 30px;
+  overflow: hidden;
 }
 @media (max-width: 767px) {
   .about .container {
@@ -720,13 +721,13 @@ body::-webkit-scrollbar-thumb {
   -o-transition: all 0.5s linear;
 }
 .skills .container .box .skill-holder .html .animate-progress::before {
-  width: 80%;
+  width: 90%;
 }
 .skills .container .box .skill-holder .css .animate-progress::before {
-  width: 70%;
+  width: 80%;
 }
 .skills .container .box .skill-holder .js .animate-progress::before {
-  width: 50%;
+  width: 70%;
 }
 .skills .container .box .skill-holder .figma .animate-progress::before {
   width: 70%;
@@ -745,13 +746,13 @@ body::-webkit-scrollbar-thumb {
   color: #767676;
 }
 .skills .container .box .skill-holder .html span::after {
-  content: "80%";
+  content: "90%";
 }
 .skills .container .box .skill-holder .css span::after {
-  content: "70%";
+  content: "80%";
 }
 .skills .container .box .skill-holder .js span::after {
-  content: "50%";
+  content: "70%";
 }
 .skills .container .box .skill-holder .figma span::after {
   content: "70%";
