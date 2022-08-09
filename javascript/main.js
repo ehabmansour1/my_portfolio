@@ -64,3 +64,51 @@ window.addEventListener("scroll", function () {
     });
   }
 });
+//tabs=================================================
+let allButt = document.querySelector(".all-butt");
+let designButt = document.querySelector(".design-butt");
+let webButt = document.querySelector(".web-butt");
+let allTabs = document.querySelectorAll(".tabs button");
+let allBoxes = document.querySelectorAll(".work .container .box");
+allTabs.forEach((e) => {
+  e.addEventListener("click", function (e) {
+    allTabs.forEach((e) => {
+      e.classList.remove("active");
+    });
+    e.currentTarget.classList.add("active");
+    if (e.currentTarget.classList.contains("all-butt")) {
+      allBoxes.forEach((e) => {
+        e.style.display = "block";
+      });
+    } else if (e.currentTarget.classList.contains("design-butt")) {
+      allBoxes.forEach((e) => {
+        e.style.display = "none";
+        if (e.classList.contains("design")) {
+          e.style.display = "block";
+        }
+      });
+    } else {
+      allBoxes.forEach((e) => {
+        e.style.display = "none";
+        if (e.classList.contains("web")) {
+          e.style.display = "block";
+        }
+      });
+    }
+  });
+});
+//animated name===========================================
+let text = document.querySelector(".animated-name");
+let arr = text.innerText.split("");
+let newarr = [];
+let counter = 0;
+let counting = setInterval(() => {
+  text.innerText = "";
+  newarr.push(arr[counter]);
+  console.log(newarr.join(""));
+  counter++;
+  text.innerHTML = newarr.join("");
+  if (arr.length === counter) {
+    clearInterval(counting);
+  }
+}, 300);
