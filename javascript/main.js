@@ -102,13 +102,16 @@ let text = document.querySelector(".animated-name");
 let arr = text.innerText.split("");
 let newarr = [];
 let counter = 0;
-let counting = setInterval(() => {
-  text.innerText = "";
-  newarr.push(arr[counter]);
-  console.log(newarr.join(""));
-  counter++;
-  text.innerHTML = newarr.join("");
-  if (arr.length === counter) {
-    clearInterval(counting);
-  }
-}, 300);
+text.innerText = "H";
+window.onload = function () {
+  let counting = setInterval(() => {
+    text.innerText = "";
+    newarr.push(arr[counter]);
+    console.log(newarr.join(""));
+    counter++;
+    text.innerHTML = newarr.join("");
+    if (arr.length === counter) {
+      clearInterval(counting);
+    }
+  }, 300);
+};
