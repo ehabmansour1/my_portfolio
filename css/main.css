@@ -955,7 +955,7 @@ body::-webkit-scrollbar-thumb {
 /* end footer  */
 /* start loader  */
 #preloader {
-  background: var(--main-color);
+  background: var(--back-color);
   height: 100vh;
   width: 100%;
   position: fixed;
@@ -992,7 +992,7 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50%;
   position: absolute;
   display: block;
-  background: var(--dot);
+  background: var(--main-color);
   top: 37px;
   left: 19px;
   transform: translate(-18px, -18px);
