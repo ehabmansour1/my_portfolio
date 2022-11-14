@@ -10,6 +10,13 @@ menu.onclick = function () {
     sections.style.display = "flex";
   }
 };
+let sectionsLinks = document.querySelectorAll(".sections a");
+sectionsLinks.forEach((e) => {
+  e.addEventListener('click', function() {
+    menu.classList.remove("menu-opened");
+    sections.style.display = "none";
+  })
+})
 // --------------------menu-----------------------
 // --------------------social-----------------------
 let links = document.getElementById("links");
@@ -27,14 +34,9 @@ links.onclick = function () {
 };
 // --------------------menu-----------------------
 // --------------------loader-----------------------
-let landing = document.getElementById("landing");
-let mountain = document.getElementById("mountain");
 var loader = document.getElementById("preloader");
-
 window.addEventListener("load", function () {
   loader.style.display = "none";
-  landing.classList.add("animation");
-  mountain.classList.add("animate-mountain");
 });
 // --------------------loader-----------------------
 // --------------------up-----------------------
@@ -56,6 +58,7 @@ span.onclick = function () {
 let skills = document.querySelector(".skills");
 let spans = document.querySelectorAll(".skills .box span");
 let box = document.querySelectorAll(".skills .box");
+let wrapper = document.querySelector(".wrapper");
 window.addEventListener("scroll", function () {
   if (window.scrollY >= skills.offsetTop - 100) {
     console.log("Reached Section Three");
@@ -64,6 +67,21 @@ window.addEventListener("scroll", function () {
     });
   }
 });
+wrapper.onscroll = function () {
+  if (document.body.clientWidth > 767) {
+    if (wrapper.scrollTop > 1300) {
+      spans.forEach((span) => {
+        span.classList.add("animate-progress");
+      });
+    }
+  } else {
+    if (wrapper.scrollTop > 1700) {
+      spans.forEach((span) => {
+        span.classList.add("animate-progress");
+      });
+    }
+  }
+};
 //tabs=================================================
 let allButt = document.querySelector(".all-butt");
 let designButt = document.querySelector(".design-butt");
@@ -107,7 +125,6 @@ window.onload = function () {
   let counting = setInterval(() => {
     text.innerText = "";
     newarr.push(arr[counter]);
-    console.log(newarr.join(""));
     counter++;
     text.innerHTML = newarr.join("");
     if (arr.length === counter) {
