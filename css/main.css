@@ -257,6 +257,9 @@ header {
 
   transform: translate(-50%, -50%);
 }
+.header .logo img {
+  width: 75px;
+}
 /* start menu */
 .header .menu {
   display: flex;

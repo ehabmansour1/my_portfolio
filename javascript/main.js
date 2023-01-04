@@ -12,11 +12,11 @@ menu.onclick = function () {
 };
 let sectionsLinks = document.querySelectorAll(".sections a");
 sectionsLinks.forEach((e) => {
-  e.addEventListener('click', function() {
+  e.addEventListener("click", function () {
     menu.classList.remove("menu-opened");
     sections.style.display = "none";
-  })
-})
+  });
+});
 // --------------------menu-----------------------
 // --------------------social-----------------------
 let links = document.getElementById("links");
