@@ -133,4 +133,23 @@ window.onload = function () {
   }, 300);
 };
 //logger==========================================================
-fetch("https://iplogger.com/1yDxf7.gif", { mode: "no-cors" });
+// fetch("https://iplogger.com/1yDxf7.gif", { mode: "no-cors" });
+//projects from the panel===========================================
+let workContainer = document.querySelector(".work .container");
+fetch("https://6420ad6525cb6572104db57f.mockapi.io/projects")
+  .then((res) => res.json())
+  .then((res) => {
+    res.forEach((e) => {
+      workContainer.insertAdjacentHTML(
+        "beforeend",
+        `<div class="box ${e.type}" data-aos="zoom-in">
+      <p>${e.name}</p>
+      <img loading="lazy" src="${e.img}" alt="gwyn" />
+      <a href="${e.link}">${
+          e.name === "Others on My Github" ? "Link" : "Live Demo"
+        }</a>
+    </div>`
+      );
+    });
+    allBoxes = document.querySelectorAll(".work .container .box");
+  });
