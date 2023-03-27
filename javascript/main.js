@@ -144,7 +144,7 @@ fetch("https://6420ad6525cb6572104db57f.mockapi.io/projects")
         "beforeend",
         `<div class="box ${e.type}" data-aos="zoom-in">
       <p>${e.name}</p>
-      <img loading="lazy" src="${e.img}" alt="gwyn" />
+      <img loading="lazy" src="${e.img}" alt="${e.name}" />
       <a href="${e.link}">${
           e.name === "Others on My Github" ? "Link" : "Live Demo"
         }</a>
