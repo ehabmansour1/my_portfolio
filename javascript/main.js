@@ -34,7 +34,7 @@ links.onclick = function () {
 };
 // --------------------menu-----------------------
 // --------------------loader-----------------------
-var loader = document.getElementById("preloader");
+var loader = document.querySelector(".loader");
 window.addEventListener("load", function () {
   loader.style.display = "none";
 });
