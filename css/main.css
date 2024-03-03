@@ -743,6 +743,9 @@ header .scroll i {
 .skills .container .box .skill-holder .js .animate-progress::before {
   width: 70%;
 }
+.skills .container .box .skill-holder .react .animate-progress::before {
+  width: 70%;
+}
 .skills .container .box .skill-holder .figma .animate-progress::before {
   width: 70%;
 }
@@ -750,7 +753,10 @@ header .scroll i {
   width: 10%;
 }
 .skills .container .box .skill-holder .ps .animate-progress::before {
-  width: 10%;
+  width: 60%;
+}
+.skills .container .box .skill-holder .ui .animate-progress::before {
+  width: 40%;
 }
 .skills .container .box .skill-holder .skill span::after {
   position: absolute;
@@ -768,6 +774,9 @@ header .scroll i {
 .skills .container .box .skill-holder .js span::after {
   content: "70%";
 }
+.skills .container .box .skill-holder .react span::after {
+  content: "70%";
+}
 .skills .container .box .skill-holder .figma span::after {
   content: "70%";
 }
@@ -775,7 +784,10 @@ header .scroll i {
   content: "10%";
 }
 .skills .container .box .skill-holder .ps span::after {
-  content: "10%";
+  content: "60%";
+}
+.skills .container .box .skill-holder .ui span::after {
+  content: "40%";
 }
 /* end skills */
 /* start work  */

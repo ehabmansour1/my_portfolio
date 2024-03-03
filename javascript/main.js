@@ -105,10 +105,17 @@ allTabs.forEach((e) => {
           e.style.display = "block";
         }
       });
-    } else {
+    } else if (e.currentTarget.classList.contains("web-butt")) {
       allBoxes.forEach((e) => {
         e.style.display = "none";
         if (e.classList.contains("web")) {
+          e.style.display = "block";
+        }
+      });
+    } else if (e.currentTarget.classList.contains("react-butt")) {
+      allBoxes.forEach((e) => {
+        e.style.display = "none";
+        if (e.classList.contains("react")) {
           e.style.display = "block";
         }
       });
