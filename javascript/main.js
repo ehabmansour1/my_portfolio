@@ -39,22 +39,6 @@ window.addEventListener("load", function () {
   loader.style.display = "none";
 });
 // --------------------loader-----------------------
-// --------------------up-----------------------
-let span = document.querySelector(".up");
-
-window.onscroll = function () {
-  window.scrollY >= 500
-    ? span.classList.add("show")
-    : span.classList.remove("show");
-};
-
-span.onclick = function () {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
-// --------------------up-----------------------
 let skills = document.querySelector(".skills");
 let spans = document.querySelectorAll(".skills .box span");
 let box = document.querySelectorAll(".skills .box");
@@ -119,29 +103,33 @@ allTabs.forEach((e) => {
           e.style.display = "block";
         }
       });
+    } else if (e.currentTarget.classList.contains("wordpress-butt")) {
+      allBoxes.forEach((e) => {
+        e.style.display = "none";
+        if (e.classList.contains("wordpress")) {
+          e.style.display = "block";
+        }
+      });
     }
   });
 });
 //animated name===========================================
-let text = document.querySelector(".animated-name");
-let arr = text.innerText.split("");
-let newarr = [];
-let counter = 0;
-text.innerText = "H";
-window.onload = function () {
-  let counting = setInterval(() => {
-    text.innerText = "";
-    newarr.push(arr[counter]);
-    counter++;
-    text.innerHTML = newarr.join("");
-    if (arr.length === counter) {
-      clearInterval(counting);
-    }
-  }, 300);
-};
-//logger==========================================================
-// fetch("https://iplogger.com/1yDxf7.gif", { mode: "no-cors" });
-//projects from the panel===========================================
+// let text = document.querySelector(".animated-name");
+// let arr = text.innerText.split("");
+// let newarr = [];
+// let counter = 0;
+// text.innerText = "H";
+// window.onload = function () {
+//   let counting = setInterval(() => {
+//     text.innerText = "";
+//     newarr.push(arr[counter]);
+//     counter++;
+//     text.innerHTML = newarr.join("");
+//     if (arr.length === counter) {
+//       clearInterval(counting);
+//     }
+//   }, 300);
+// };
 let workContainer = document.querySelector(".work .container");
 fetch("https://6420ad6525cb6572104db57f.mockapi.io/projects")
   .then((res) => res.json())
@@ -152,7 +140,7 @@ fetch("https://6420ad6525cb6572104db57f.mockapi.io/projects")
         `<div class="box ${e.type}" data-aos="zoom-in">
       <p>${e.name}</p>
       <img loading="lazy" src="${e.img}" alt="${e.name}" />
-      <a href="${e.link}">${
+      <a href="${e.link}" target="_blank">${
           e.name === "Others on My Github" ? "Link" : "Live Demo"
         }</a>
     </div>`
